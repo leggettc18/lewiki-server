@@ -6,7 +6,6 @@ import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
 import { HelloResolver } from "./resolvers/hello";
 import { PageResolver } from "./resolvers/page";
-import { Page } from "./entities/Page";
 import { UserResolver } from "./resolvers/user";
 
 const main = async () => {
@@ -30,5 +29,3 @@ const main = async () => {
 };
 
 main();
-
-console.log("hello world!");
