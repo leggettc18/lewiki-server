@@ -2,9 +2,10 @@ import { PROD } from "./constants";
 import { Page } from "./entities/Page";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
+import { User } from "./entities/User";
 
 export default {
-  entities: [Page],
+  entities: [Page, User],
   migrations: {
     path: path.join(__dirname, "./migrations"),
     pattern: /^[\w-]+\d+\.[tj]s$/,
