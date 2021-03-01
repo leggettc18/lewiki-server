@@ -1,7 +1,6 @@
-import { text } from "express";
 import { Page } from "../entities/Page";
 import { MyContext } from "src/types";
-import { Arg, Ctx, Int, Mutation, Query, Resolver } from "type-graphql";
+import { Arg, Ctx, Mutation, Query, Resolver } from "type-graphql";
 
 @Resolver()
 export class PageResolver {
