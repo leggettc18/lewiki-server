@@ -10,7 +10,7 @@ import { UserResolver } from "./resolvers/user";
 import redis from "redis";
 import session from "express-session";
 import connectRedis from "connect-redis";
-import { PROD } from "./constants";
+import { COOKIE_NAME, PROD } from "./constants";
 import { MyContext } from "./types";
 import cors from "cors";
 
@@ -31,7 +31,7 @@ const main = async () => {
 
   app.use(
     session({
-      name: "qid",
+      name: COOKIE_NAME,
       store: new RedisStore({ client: redisClient, disableTouch: true }),
       cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 365 * 10, //10 years
